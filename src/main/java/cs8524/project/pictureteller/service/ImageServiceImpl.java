@@ -27,7 +27,6 @@ public class ImageServiceImpl implements ImageService {
     private String filePath;
 
     //private String[] arguments = {"python", "C:\\Users\\BinYin\\Desktop\\python_and_java\\printSentence.py", ""};
-
     private String[] arguments = {"python", "C:\\Users\\BinYin\\Desktop\\python_and_java\\printSentence.py", "--image", ""};
 
 
