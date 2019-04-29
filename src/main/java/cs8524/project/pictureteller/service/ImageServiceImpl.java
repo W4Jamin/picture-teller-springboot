@@ -26,8 +26,11 @@ public class ImageServiceImpl implements ImageService {
     @Value("${imageService.file.path}")
     private String filePath;
 
+    @Value("${imageService.python.path}")
+    private String pythonPath;
+
     //private String[] arguments = {"python", "C:\\Users\\BinYin\\Desktop\\python_and_java\\printSentence.py", ""};
-    private String[] arguments = {"python", "C:\\Users\\BinYin\\Desktop\\python_and_java\\printSentence.py", "--image", ""};
+    private String[] arguments = {"python", "", "--image", ""};
 
 
     private final UserRepository userRepository;
@@ -65,6 +68,7 @@ public class ImageServiceImpl implements ImageService {
             File dest = new File(filePath + fileName);
             file.transferTo(dest);
 
+            arguments[2] = pythonPath;
             arguments[3] = filePath + fileName;
 
             try {
