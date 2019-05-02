@@ -68,6 +68,9 @@ public class ImageServiceImpl implements ImageService {
             File dest = new File(filePath + fileName);
             file.transferTo(dest);
 
+//            String currentReletivePath = new java.io.File( "." ).getCanonicalPath();
+//            System.out.println(current);
+
             arguments[2] = pythonPath;
             arguments[3] = filePath + fileName;
 

@@ -44,7 +44,6 @@ public class ImageController {
 
     @GetMapping("user/{id}/image/{imageId}")
     public void renderImageFromDB(@PathVariable String id, @PathVariable String imageId, HttpServletResponse response) throws IOException {
-        //User user = userRepository.findById(Long.valueOf(id)).get();
 
         Image image = imageService.findImageByIdAndImageId(Long.valueOf(id), Long.valueOf(imageId));
 

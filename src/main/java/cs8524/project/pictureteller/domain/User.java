@@ -3,6 +3,7 @@ package cs8524.project.pictureteller.domain;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,7 +19,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     private String firstName;
+
+    @NotBlank
     private String lastName;
 
     @Enumerated(value = EnumType.STRING)
